@@ -1,0 +1,14 @@
+textarea {
+    resize: none;
+    border:#DCDCDC;
+  }
+#border{
+      border:2px solid #DCDCDC;
+  }
+  #index{
+  color:#606060;
+  text-align:right;
+  }
+  body{
+      padding-top: 20px;
+  }
