@@ -2,6 +2,7 @@
 <html>
 <head>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -12,20 +13,27 @@
     <div class="row m-0 p-3">
         <div class="col-4"><h3>Type Your Code</h3></div>
         <div class="col-8 text-right pt-2">
-            <select name="languages">
+            <select id="languages">
                 <option disabled>--Select--</option>
-                <option value="python" selected>Python</option>
-                <option value="javascript">JavaScript</option>
-                <option value="c">C</option>
-                <option value="cpp">CPP</option>
-                <option value="java">Java</option>
+                <option value="0" selected>Python</option>
+                <option value="4">JavaScript</option>
+                <option value="7">C</option>
+                <option value="77">CPP</option>
+                <option value="8">Java</option>
               </select>
         </div>
     </div>
     <div id="border" class="row m-0">
-        <div class="col-1 bg-light"><p id="index">1</p></div>
-      <textarea rows="24" class="col-11">#Write your code</textarea>
+    <div class="col-1 bg-light" id="wid"><ul id="index"><li>1</li></ul></div>
+      <textarea rows="15" class="col-11" id="textarea">
+          #Write your code
+      </textarea>
       </div>
+    <div class="row-12 pt-3">
+        <div class="col-12" id="output">OUTPUT: </div>
+    </div>
+    <button class="btn btn-warning mt-2" id="compile">Compile</button>
 </div>
+<script src="script.js"></script>
 </body>
 </html>
