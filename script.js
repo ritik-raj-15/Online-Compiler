@@ -1,16 +1,17 @@
 var textarea=document.getElementById("textarea");
 var index=document.getElementById("index");
-var count=2;
+var count=1;
 textarea.addEventListener("keyup", (event)=>{
  if(event.keyCode === 13)
     {
-        index.innerHTML+=`<li>${count}</li>`;
         count++;
+        index.innerHTML+=`<li>${count}</li>`;
     }
 });
 
  textarea.addEventListener("keyup", (event)=>{
-    if(event.key === "Backspace")
+    var length = textarea.value.split("\n").length;
+    if(event.key === "Backspace" && length<count)
     {
         index.removeChild(index.lastChild);
         count--;
